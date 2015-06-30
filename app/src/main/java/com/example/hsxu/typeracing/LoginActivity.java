@@ -188,8 +188,7 @@ public class LoginActivity extends BaseGameActivity implements
                 if (getApiClient().isConnected()) {
                     setCurrentScreen(R.id.waiting_screen);
                     startQuickGame();
-                }
-                else {
+                } else {
                     createToast("Please sign in to access quick matches.");
                 }
                 break;
@@ -197,8 +196,7 @@ public class LoginActivity extends BaseGameActivity implements
             case R.id.invite_players_button: {
                 if (getApiClient().isConnected()) {
                     invitePlayers();
-                }
-                else {
+                } else {
                     createToast("Please sign in to invite players.");
                 }
                 break;
@@ -206,8 +204,7 @@ public class LoginActivity extends BaseGameActivity implements
             case R.id.view_invitations_button: {
                 if (getApiClient().isConnected()) {
                     setCurrentScreen(R.id.multiplayer_game_screen);
-                }
-                else {
+                } else {
                     createToast("Please sign in to view invitations.");
                 }
                 break;
@@ -501,8 +498,7 @@ public class LoginActivity extends BaseGameActivity implements
             }
             if (finalScore) {
                 Games.RealTimeMultiplayer.sendReliableMessage(getApiClient(), null, msgBuffer, mRoomId, p.getParticipantId());
-            }
-            else {
+            } else {
                 Games.RealTimeMultiplayer.sendUnreliableMessage(getApiClient(), msgBuffer, mRoomId, p.getParticipantId());
             }
         }

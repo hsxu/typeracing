@@ -111,9 +111,7 @@ public class singleplayer_activity extends BaseGameActivity implements View.OnCl
             case R.id.sendToLeaderboardsButton: {
                 if (getApiClient().isConnected()) {
                     Games.Leaderboards.submitScore(getApiClient(), LEADERBOARD_ID, mGameEngine.getFinalWPM());
-                }
-
-                else {
+                } else {
                     Toast toast = Toast.makeText(this, "Please sign in to send to leaderboards.", Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();

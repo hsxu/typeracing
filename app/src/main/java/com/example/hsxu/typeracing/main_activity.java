@@ -92,8 +92,7 @@ public class main_activity extends BaseGameActivity implements
                 if (getApiClient().isConnected()) {
                     startActivityForResult(Games.Leaderboards.getLeaderboardIntent(getApiClient(),
                             LEADERBOARD_ID), 100);
-                }
-                else {
+                } else {
                     Toast toast = Toast.makeText(this, "Please sign in to view leaderboards.", Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
