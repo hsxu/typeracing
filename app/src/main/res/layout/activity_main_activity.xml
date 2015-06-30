@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/darkgreybackground"
+    tools:context=".main_activity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TypeRacing"
+        android:textSize="48dp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFBB33"
+        android:layout_marginBottom="50dp"/>
+    <Button
+        android:id="@+id/singleplayer_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Singleplayer"
+        android:fontFamily="sans-serif-light"
+        android:background="@drawable/background"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/multiplayer_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multiplayer"
+        android:fontFamily="sans-serif-light"
+        android:background="@drawable/background"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/leaderboards_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leaderboards"
+        android:fontFamily="sans-serif-light"
+        android:background="@drawable/background"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:layout_marginBottom="150dp"/>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- sign-out button -->
+    <Button
+        android:id="@+id/sign_out_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"
+        android:fontFamily="sans-serif-light"
+        android:background="@drawable/background"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,214 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.hsxu.typeracing.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/menu_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/darkgreybackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multiplayer"
+            android:textSize="48dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="#FFBB33"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status:"
+                android:textSize="36dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#FFFFFF"
+                android:layout_marginRight="6dp"/>
+            <TextView
+                android:id="@+id/signed_in_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Signed Out"
+                android:textSize="30dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#FF4444"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/quick_match_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick match"
+            android:background="@drawable/background"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-light"/>
+        <Button
+            android:id="@+id/invite_players_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invite Players"
+            android:background="@drawable/background"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-light"/>
+        <Button
+            android:id="@+id/view_invitations_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Invitations"
+            android:background="@drawable/background"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"
+            android:layout_marginBottom="150dp"
+            android:fontFamily="sans-serif-light"/>
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/sign_out_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            android:visibility="gone"
+            android:background="@drawable/background"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"
+            android:fontFamily="sans-serif-light"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/waiting_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/darkgreybackground">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TypeRacing"
+            android:textSize="48dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="#FFBB33"/>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/waitingProgressBar"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:background="#00d8d8d8" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/multiplayer_game_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/darkgreybackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#AA2c3e50">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Multiplayer"
+                android:textSize="36sp"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ready"
+                android:textColor="#FF8800"
+                android:textSize="26sp"
+                android:paddingBottom="30dp"
+                android:paddingLeft="16dp"
+                android:fontFamily="sans-serif-light"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/game_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id ="@+id/messageBox"
+                android:text="hello hello hello hello hello hello hello hello"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:lineSpacingExtra="14sp"
+                android:textSize="20sp"
+                android:padding="16dp"
+                android:textColor="#000000"
+                android:background="#AAd8d8d8"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/typingBox"
+                android:text=""
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:background="#AAd8d8d8"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="24dp"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/restartButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="restartGame"
+                    android:text="Restart"
+                    android:background="#2c3e50"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#FFFFFF"
+                    android:padding="10dp"
+                    android:fontFamily="sans-serif-light"/>
+                <Button
+                    android:id="@+id/sendToLeaderboardsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send To Leaderboards"
+                    android:background="#2c3e50"
+                    android:textColor="#FFFFFF"
+                    android:padding="10dp"
+                    android:fontFamily="sans-serif-light"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Blank layout, this is where the keyboard space is -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
